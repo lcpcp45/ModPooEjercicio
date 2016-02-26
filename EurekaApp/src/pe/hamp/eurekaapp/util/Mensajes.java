@@ -1,0 +1,29 @@
+package pe.hamp.eurekaapp.util;
+
+import java.awt.Component;
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @
+ */
+public final class Mensajes {
+
+  private Mensajes() {
+  }
+  
+  public static void showInfo(Component parent, String message){
+    JOptionPane.showMessageDialog(parent, message, "INFO", 
+            JOptionPane.INFORMATION_MESSAGE);
+  }
+  
+  public static void showError(Component parent, String message){
+    JOptionPane.showMessageDialog(parent, message, "ERROR", 
+            JOptionPane.ERROR_MESSAGE);
+  }
+  
+  public static int showConfirm(Component parent, String message){
+      return JOptionPane.showConfirmDialog(parent, message, "CONFIRMACION", 0, 0);  
+  }
+  
+}
